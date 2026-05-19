@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>光模块行业投资分析 · 2025年报深度解读</title>
+<style>
+  :root {
+    --bg: #0a0e1a;
+    --card: #111827;
+    --card-hover: #1a2332;
+    --border: #1e293b;
+    --accent: #f59e0b;
+    --accent2: #ef4444;
+    --green: #10b981;
+    --blue: #3b82f6;
+    --text: #e2e8f0;
+    --text2: #94a3b8;
+    --text3: #64748b;
+    --red-stock: #ef4444;
+    --green-stock: #10b981;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.7;
+  }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    padding: 80px 40px 60px;
+    text-align: center;
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 50%, rgba(245,158,11,0.08) 0%, transparent 50%),
+                radial-gradient(circle at 70% 50%, rgba(59,130,246,0.08) 0%, transparent 50%);
+    animation: pulse 8s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
+  .hero h1 {
+    position: relative;
+    font-size: 2.8em;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--accent), #fbbf24, var(--blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 16px;
+  }
+  .hero p {
+    position: relative;
+    font-size: 1.1em;
+    color: var(--text2);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .hero .date-tag {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 6px 16px;
+    background: rgba(245,158,11,0.15);
+    border: 1px solid rgba(245,158,11,0.3);
+    border-radius: 20px;
+    font-size: 0.85em;
+    color: var(--accent);
+  }
+
+  /* Container */
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* Section */
+  section { padding: 60px 0; }
+  .section-title {
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-title .icon {
+    font-size: 1.2em;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(245,158,11,0.12);
+    border-radius: 10px;
+  }
+  .section-sub { color: var(--text2); margin-bottom: 32px; font-size: 0.95em; }
+
+  /* KPI Cards */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+  .kpi-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    transition: all 0.3s;
+  }
+  .kpi-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(245,158,11,0.1);
+  }
+  .kpi-value {
+    font-size: 2.4em;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+  .kpi-value.up { color: var(--red-stock); }
+  .kpi-value.highlight { color: var(--accent); }
+  .kpi-label { color: var(--text2); font-size: 0.9em; margin-top: 8px; }
+  .kpi-note { color: var(--text3); font-size: 0.78em; margin-top: 4px; }
+
+  /* Table */
+  .table-wrap {
+    overflow-x: auto;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    margin-bottom: 32px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92em;
+  }
+  thead th {
+    padding: 14px 16px;
+    text-align: left;
+    background: rgba(245,158,11,0.08);
+    color: var(--accent);
+    font-weight: 600;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+  }
+  tbody td {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(30,41,59,0.5);
+    white-space: nowrap;
+  }
+  tbody tr:hover { background: var(--card-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+  .stock-code { color: var(--text3); font-size: 0.85em; }
+  .rank-1 { color: #fbbf24; }
+  .rank-2 { color: #94a3b8; }
+  .rank-3 { color: #d97706; }
+  .tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.8em;
+    font-weight: 600;
+  }
+  .tag-red { background: rgba(239,68,68,0.15); color: var(--red-stock); }
+  .tag-green { background: rgba(16,185,129,0.15); color: var(--green-stock); }
+  .tag-gold { background: rgba(245,158,11,0.15); color: var(--accent); }
+  .tag-blue { background: rgba(59,130,246,0.15); color: var(--blue); }
+
+  /* Chart bars */
+  .bar-chart { margin: 32px 0; }
+  .bar-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    gap: 12px;
+  }
+  .bar-label {
+    width: 100px;
+    text-align: right;
+    font-size: 0.9em;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+  .bar-track {
+    flex: 1;
+    height: 32px;
+    background: rgba(30,41,59,0.5);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+  }
+  .bar-fill {
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    font-size: 0.82em;
+    font-weight: 700;
+    color: #fff;
+    transition: width 1.5s ease;
+  }
+  .bar-fill.red { background: linear-gradient(90deg, #dc2626, #ef4444); }
+  .bar-fill.gold { background: linear-gradient(90deg, #d97706, #f59e0b); }
+  .bar-fill.blue { background: linear-gradient(90deg, #2563eb, #3b82f6); }
+  .bar-fill.green { background: linear-gradient(90deg, #059669, #10b981); }
+
+  /* Info cards */
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 20px;
+  }
+  .info-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.3s;
+  }
+  .info-card:hover {
+    border-color: rgba(245,158,11,0.3);
+    transform: translateY(-2px);
+  }
+  .info-card h3 {
+    font-size: 1.05em;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .info-card p, .info-card li {
+    color: var(--text2);
+    font-size: 0.9em;
+    line-height: 1.8;
+  }
+  .info-card ul { list-style: none; }
+  .info-card li::before {
+    content: '▸ ';
+    color: var(--accent);
+  }
+
+  /* Timeline */
+  .timeline { padding-left: 32px; border-left: 2px solid var(--border); }
+  .timeline-item { position: relative; padding: 0 0 32px 24px; }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(245,158,11,0.4);
+  }
+  .timeline-item h4 { font-size: 0.95em; margin-bottom: 6px; }
+  .timeline-item p { color: var(--text2); font-size: 0.88em; }
+
+  /* Risk box */
+  .risk-box {
+    background: rgba(239,68,68,0.06);
+    border: 1px solid rgba(239,68,68,0.2);
+    border-radius: 16px;
+    padding: 24px;
+    margin-top: 32px;
+  }
+  .risk-box h3 {
+    color: var(--red-stock);
+    font-size: 1.05em;
+    margin-bottom: 12px;
+  }
+  .risk-box li {
+    color: var(--text2);
+    font-size: 0.9em;
+    margin-bottom: 8px;
+    list-style: none;
+  }
+  .risk-box li::before { content: '⚠️ '; }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 40px;
+    color: var(--text3);
+    font-size: 0.82em;
+    border-top: 1px solid var(--border);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 1.8em; }
+    .hero { padding: 48px 20px 40px; }
+    .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+    .bar-label { width: 80px; font-size: 0.82em; }
+    section { padding: 40px 0; }
+    .info-grid { grid-template-columns: 1fr; }
+  }
+
+  /* Animations */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<header class="hero">
+  <h1>🔆 光模块行业投资分析</h1>
+  <p>AI算力爆发的核心受益赛道 · 2025年报全景深度解读</p>
+  <span class="date-tag">📅 数据截至 2025年报 · 更新于 2026年5月</span>
+</header>
+
+<div class="container">
+
+  <!-- KPI -->
+  <section class="fade-in">
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-value up">56只</div>
+        <div class="kpi-label">2025年以来翻倍股</div>
+        <div class="kpi-note">光模块概念板块</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value up">+283%</div>
+        <div class="kpi-label">板块总市值增长</div>
+        <div class="kpi-note">1.73万亿 → 6.62万亿</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value highlight">228亿$</div>
+        <div class="kpi-label">2026年全球数通市场规模</div>
+        <div class="kpi-note">中金公司预测 · 年复合增速20%</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value up">+1158%</div>
+        <div class="kpi-label">涨幅最大</div>
+        <div class="kpi-note">长飞光纤（光纤龙头）</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 龙头涨幅 -->
+  <section class="fade-in">
+    <div class="section-title">
+      <span class="icon">📈</span> 龙头股价表现（2025年以来）
+    </div>
+    <p class="section-sub">"光模块三杰"（易中天）+ 黑马股，涨幅惊人</p>
+    <div class="bar-chart">
+      <div class="bar-item">
+        <span class="bar-label">长飞光纤</span>
+        <div class="bar-track"><div class="bar-fill red" style="width:100%">+1158%</div></div>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">源杰科技</span>
+        <div class="bar-track"><div class="bar-fill red" style="width:92%">+1064%</div></div>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">中际旭创</span>
+        <div class="bar-track"><div class="bar-fill gold" style="width:65%">+755%</div></div>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">新易盛</span>
+        <div class="bar-track"><div class="bar-fill gold" style="width:55%">+642%</div></div>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">天孚通信</span>
+        <div class="bar-track"><div class="bar-fill gold" style="width:45%">+518%</div></div>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">仕佳光子</span>
+        <div class="bar-track"><div class="bar-fill blue" style="width:38%">+473%净利</div></div>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">永鼎股份</span>
+        <div class="bar-track"><div class="bar-fill blue" style="width:32%">涨幅靠前</div></div>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">腾景科技</span>
+        <div class="bar-track"><div class="bar-fill blue" style="width:28%">涨幅靠前</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 业绩排行 -->
+  <section class="fade-in">
+    <div class="section-title">
+      <span class="icon">🏆</span> 2025年度业绩排行榜
+    </div>
+    <p class="section-sub">20家光模块概念公司核心财务数据对比</p>
+
+    <!-- 营收TOP5 -->
+    <h3 style="font-size:1em; margin-bottom:12px; color:var(--accent);">💰 营收TOP 5</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>排名</th>
+            <th>公司</th>
+            <th>代码</th>
+            <th>2025营收</th>
+            <th>同比增速</th>
+            <th>标签</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="rank-1">🥇</td>
+            <td><strong>东山精密</strong></td>
+            <td class="stock-code">002384.SZ</td>
+            <td>401.25亿</td>
+            <td style="color:var(--red-stock)">+9.12%</td>
+            <td><span class="tag tag-gold">营收冠军</span></td>
+          </tr>
+          <tr>
+            <td class="rank-2">🥈</td>
+            <td><strong>中际旭创</strong></td>
+            <td class="stock-code">300308.SZ</td>
+            <td>382.40亿</td>
+            <td style="color:var(--red-stock)">+60.25%</td>
+            <td><span class="tag tag-gold">行业龙头</span></td>
+          </tr>
+          <tr>
+            <td class="rank-3">🥉</td>
+            <td><strong>新易盛</strong></td>
+            <td class="stock-code">300502.SZ</td>
+            <td>248.42亿</td>
+            <td style="color:var(--red-stock)">+187.19%</td>
+            <td><span class="tag tag-red">增速王</span></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><strong>光迅科技</strong></td>
+            <td class="stock-code">002281.SZ</td>
+            <td>119.29亿</td>
+            <td style="color:var(--red-stock)">+44.20%</td>
+            <td><span class="tag tag-blue">全系列</span></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><strong>天孚通信</strong></td>
+            <td class="stock-code">300394.SZ</td>
+            <td>51.63亿</td>
+            <td style="color:var(--red-stock)">+58.79%</td>
+            <td><span class="tag tag-blue">平台型</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 净利润TOP5 -->
+    <h3 style="font-size:1em; margin-bottom:12px; color:var(--accent);">💎 净利润TOP 5</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>排名</th>
+            <th>公司</th>
+            <th>2025净利润</th>
+            <th>同比增速</th>
+            <th>毛利率</th>
+            <th>亮点</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="rank-1">🥇</td>
+            <td><strong>中际旭创</strong></td>
+            <td style="color:var(--red-stock); font-weight:700">115.8亿</td>
+            <td style="color:var(--red-stock)">+108.78%</td>
+            <td>42.61%</td>
+            <td>800G全球市占率>40%</td>
+          </tr>
+          <tr>
+            <td class="rank-2">🥈</td>
+            <td><strong>新易盛</strong></td>
+            <td style="color:var(--red-stock); font-weight:700">95.53亿</td>
+            <td style="color:var(--red-stock)">+236.64%</td>
+            <td>-</td>
+            <td>LPO技术重兵布局</td>
+          </tr>
+          <tr>
+            <td class="rank-3">🥉</td>
+            <td><strong>天孚通信</strong></td>
+            <td>20.17亿</td>
+            <td style="color:var(--red-stock)">+50.15%</td>
+            <td>-</td>
+            <td>光引擎规模量产</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><strong>源杰科技</strong></td>
+            <td>-</td>
+            <td style="color:var(--red-stock); font-weight:700">+3212%</td>
+            <td>-</td>
+            <td><span class="tag tag-red">盈利弹性最大</span></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><strong>仕佳光子</strong></td>
+            <td>-</td>
+            <td style="color:var(--red-stock)">+473.25%</td>
+            <td>-</td>
+            <td><span class="tag tag-red">黑马股</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 投资逻辑 -->
+  <section class="fade-in">
+    <div class="section-title">
+      <span class="icon">🧠</span> 核心投资逻辑
+    </div>
+    <p class="section-sub">为什么光模块是AI时代最确定的投资赛道之一</p>
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>🔥 AI算力需求爆发</h3>
+        <ul>
+          <li>光模块是AI算力集群的<strong>关键组件</strong></li>
+          <li>速率从400G → 800G → 1.6T持续升级</li>
+          <li>订单旺盛，生产一线用工需求激增</li>
+          <li>Google 400万卡TPU-v6集群带来巨量需求</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>🌐 技术迭代驱动</h3>
+        <ul>
+          <li><strong>1.6T光模块</strong>正式商用，开启新周期</li>
+          <li><strong>CPO（光电共封装）</strong>加速渗透</li>
+          <li><strong>LPO（线性驱动）</strong>降低功耗与延迟</li>
+          <li><strong>硅光集成</strong>提高集成度、降低成本</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>🏭 国产替代加速</h3>
+        <ul>
+          <li>"人工智能+"行动深入推进</ul>
+          <li>自主可控战略推动国产化</li>
+          <li>头部企业全球市占率持续提升</li>
+          <li>中际旭创800G全球市占率超40%</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>🌍 全球化布局</h3>
+        <ul>
+          <li>天孚通信：苏州+新加坡双总部</li>
+          <li>新易盛：泰国设全资子公司</li>
+          <li>中际旭创：增资5.17亿美元扩产</li>
+          <li>属地化交付降低地缘风险</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 技术路线 -->
+  <section class="fade-in">
+    <div class="section-title">
+      <span class="icon">⚙️</span> 技术演进路线
+    </div>
+    <p class="section-sub">从400G到1.6T再到CPO，每一步都是格局重塑</p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>400G时代 <span class="tag tag-blue" style="vertical-align:middle">已成熟</span></h4>
+        <p>基础产品线，覆盖10G至400G全系列。价格竞争激烈，利润空间收窄。</p>
+      </div>
+      <div class="timeline-item">
+        <h4>800G时代 <span class="tag tag-gold" style="vertical-align:middle">2025年主力</span></h4>
+        <p>800G产品主导市场的绝对红利年。中际旭创全球市占率超40%，新易盛首次跻身Google 800G供应链。</p>
+      </div>
+      <div class="timeline-item">
+        <h4>1.6T时代 <span class="tag tag-red" style="vertical-align:middle">2026年爆发</span></h4>
+        <p>中际旭创率先放量交付，下半年加速上量。订单能见度已延伸至2027年。</p>
+      </div>
+      <div class="timeline-item">
+        <h4>CPO时代 <span class="tag tag-green" style="vertical-align:middle">未来方向</span></h4>
+        <p>光电共封装将光引擎与交换机芯片同封装，最大限度减少高速电信号损耗。天孚通信已提前卡位。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 机构观点 -->
+  <section class="fade-in">
+    <div class="section-title">
+      <span class="icon">🏛️</span> 机构观点速览
+    </div>
+    <p class="section-sub">主流券商和研究机构最新研判</p>
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>📊 华宝基金 · 曹旭辰</h3>
+        <p>"中际旭创当前约26倍PE，与英伟达估值相近，且明年增速更快，<strong>未见明显泡沫化</strong>。"</p>
+      </div>
+      <div class="info-card">
+        <h3>📊 开源证券</h3>
+        <p>"光模块产业迎来<strong>技术创新与供需共振</strong>的历史性窗口。"</p>
+      </div>
+      <div class="info-card">
+        <h3>📊 方正证券</h3>
+        <p>"看好高速光模块市场继续受益于<strong>北美CSP 2026年Capex高投入</strong>，国内企业有望维持高行业景气度。"</p>
+      </div>
+      <div class="info-card">
+        <h3>📊 万联证券</h3>
+        <p>"光互连在AI数据中心建设中的重要性凸显，建议关注高速光模块及光通信产业链<strong>上游核心材料、光器件、光芯片</strong>。"</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 风险提示 -->
+  <section class="fade-in">
+    <div class="section-title">
+      <span class="icon">⚠️</span> 风险提示
+    </div>
+    <div class="risk-box">
+      <h3>投资需谨慎，以下风险需重点关注</h3>
+      <ul>
+        <li><strong>涨幅已大：</strong>56只翻倍，板块从1.73万亿涨至6.62万亿，追高风险加大</li>
+        <li><strong>交易拥挤：</strong>机构持仓集中，抱团交易隐含波动加剧风险</li>
+        <li><strong>业绩分化：</strong>29家披露业绩中，3家营收下滑、4家利润双下滑，缺乏高速产品能力的企业被加速淘汰</li>
+        <li><strong>关键假设：</strong>若海外AI资本开支放缓，股价可能面临预期修正</li>
+        <li><strong>供应链依赖：</strong>高端光芯片仍依赖外部供应</li>
+        <li><strong>国际贸易：</strong>关税政策变化可能引发原材料价格波动</li>
+        <li><strong>周期性风险：</strong>2027年后需警惕价格战与周期性回调</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 总结 -->
+  <section class="fade-in">
+    <div class="section-title">
+      <span class="icon">📌</span> 总结
+    </div>
+    <div class="info-card" style="border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.04);">
+      <p style="font-size:1em; line-height:2;">
+        光模块是AI算力时代<strong>确定性最高</strong>的受益赛道之一。
+        2025年行业全面爆发，"易中天"三剑客（中际旭创、新易盛、天孚通信）业绩亮眼，
+        1.6T商用开启新一轮产品周期。<br><br>
+        <strong>投资建议：</strong>关注具备800G/1.6T高速产品量产能力、拥有自主光芯片技术、
+        并积极布局全球化产能的龙头企业。短期注意高位波动风险，
+        中长期看好技术迭代带来的持续增长。<br><br>
+        <span style="color:var(--text3); font-size:0.85em;">
+          ⚠️ 以上内容基于公开信息整理，不构成任何投资建议。股市有风险，入市需谨慎。
+          数据来源：东方财富、每日经济新闻、中金公司、各上市公司年报。
+        </span>
+      </p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>光模块行业投资分析 · 数据截至2025年年报 · 2026年5月更新</p>
+  <p style="margin-top:4px;">内容仅供参考，不构成投资建议</p>
+</footer>
+
+<script>
+  // Fade-in animation on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
